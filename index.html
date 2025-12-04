@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HopeFund – Donate & Change Lives</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">Hope<span>Fund</span></div>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="active-nav">Home</a>
+        <a href="about.html">About</a>
+        <a href="impact.html">Impact</a>
+        <a href="faq.html">FAQ</a>
+        <a href="#donate">Donate</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-text fade-in-on-scroll">
+        <h1>Give Hope.<br /><span>One Donation Changes Everything.</span></h1>
+        <p>
+          Your kindness provides food, education, and clean water to families who need it most.
+          Together, we build a future full of dignity and opportunity.
+        </p>
+        <div class="hero-actions">
+          <a href="#donate" class="btn btn-primary">Donate Now</a>
+          <a href="impact.html" class="btn btn-outline">See the Impact</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <h3>$120,540</h3>
+            <p>Raised so far</p>
+          </div>
+          <div>
+            <h3>2,340+</h3>
+            <p>Generous donors</p>
+          </div>
+          <div>
+            <h3>48</h3>
+            <p>Active projects</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card fade-in-on-scroll">
+        <h2>Quick Donate</h2>
+        <p>Select an amount or enter your own.</p>
+        <div class="amount-buttons" id="quickAmounts">
+          <button type="button" data-amount="10">$10</button>
+          <button type="button" data-amount="25">$25</button>
+          <button type="button" data-amount="50">$50</button>
+          <button type="button" data-amount="100">$100</button>
+        </div>
+        <div class="input-group">
+          <label for="heroAmount">Custom Amount (USD)</label>
+          <input type="number" id="heroAmount" min="1" placeholder="Enter amount" />
+        </div>
+        <button class="btn btn-primary btn-full" id="heroDonateBtn">
+          Continue to Payment
+        </button>
+        <p class="hero-secure">Secure payments via SSLCOMMERZ and trusted partners.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Causes Section -->
+  <section class="section fade-in-on-scroll" id="causes">
+    <div class="container">
+      <div class="section-title">
+        <h2>Support a Cause</h2>
+        <p>Every donation you make is carefully directed to where it is needed most.</p>
+      </div>
+
+      <div class="grid causes-grid">
+        <!-- Cause 1 -->
+        <article class="card cause-card fade-in-on-scroll">
+          <div class="card-image">
+            <img src="images/food-support.jpg" alt="Volunteer handing food to a family" />
+          </div>
+          <div class="card-body">
+            <h3>Emergency Food Support</h3>
+            <p>
+              Provide nutritious food packages to families facing hunger and crisis.
+            </p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 68%;"></div>
+            </div>
+            <div class="progress-info">
+              <span>$6,800 raised</span>
+              <span>of $10,000</span>
+            </div>
+            <button class="btn btn-secondary cause-donate-btn" data-cause="Emergency Food Support">
+              Donate to this cause
+            </button>
+          </div>
+        </article>
+
+        <!-- Cause 2 -->
+        <article class="card cause-card fade-in-on-scroll">
+          <div class="card-image">
+            <img src="images/education-children.jpg" alt="Children studying with books" />
+          </div>
+          <div class="card-body">
+            <h3>Education for Every Child</h3>
+            <p>
+              Help children access school, learning materials, and safe classrooms.
+            </p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 42%;"></div>
+            </div>
+            <div class="progress-info">
+              <span>$4,200 raised</span>
+              <span>of $10,000</span>
+            </div>
+            <button class="btn btn-secondary cause-donate-btn" data-cause="Education for Every Child">
+              Donate to this cause
+            </button>
+          </div>
+        </article>
+
+        <!-- Cause 3 -->
+        <article class="card cause-card fade-in-on-scroll">
+          <div class="card-image">
+            <img src="images/clean-water.jpg" alt="Children drinking clean water from a pump" />
+          </div>
+          <div class="card-body">
+            <h3>Clean Water Initiative</h3>
+            <p>
+              Fund wells, water filters, and sanitation in remote communities.
+            </p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 15%;"></div>
+            </div>
+            <div class="progress-info">
+              <span>$1,500 raised</span>
+              <span>of $10,000</span>
+            </div>
+            <button class="btn btn-secondary cause-donate-btn" data-cause="Clean Water Initiative">
+              Donate to this cause
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story / Banner Section -->
+  <section class="section section-alt fade-in-on-scroll">
+    <div class="container story-grid">
+      <div class="story-image-wrap">
+        <img src="images/community-smiles.jpg" alt="Community smiling together" class="story-image" />
+      </div>
+      <div class="story-text">
+        <h2>Every Gift Tells a Story</h2>
+        <p>
+          Behind every donation is a story of hope — a child who returns to school, a family
+          with food on the table, a village drinking safe water for the first time.
+        </p>
+        <p>
+          Your generosity lights up those stories. We work with trusted local partners to ensure
+          your support reaches real people with real needs.
+        </p>
+        <a href="impact.html" class="btn btn-outline">Read Impact Stories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Form -->
+  <section class="section fade-in-on-scroll" id="donate">
+    <div class="container donate-container">
+      <div class="donate-info">
+        <h2>Complete Your Donation</h2>
+        <p>
+          Fill in your details below. You will be redirected to SSLCOMMERZ to complete your secure payment.
+        </p>
+        <ul class="donate-list">
+          <li>Secure payment with cards & mobile wallets</li>
+          <li>Instant email confirmation (once you integrate backend email)</li>
+          <li>Help us plan long-term support with monthly giving</li>
+        </ul>
+      </div>
+
+      <form class="donate-form" id="donationForm">
+        <div class="input-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" required placeholder="Your full name" />
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="you@example.com" />
+        </div>
+
+        <div class="input-group">
+          <label for="cause">Select Cause</label>
+          <select id="cause">
+            <option value="General Fund">General Fund</option>
+            <option value="Emergency Food Support">Emergency Food Support</option>
+            <option value="Education for Every Child">Education for Every Child</option>
+            <option value="Clean Water Initiative">Clean Water Initiative</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="amount">Amount (USD)</label>
+          <input type="number" id="amount" min="1" required placeholder="e.g., 25" />
+        </div>
+
+        <div class="input-group">
+          <label>Donation Frequency</label>
+          <div class="radio-group">
+            <label><input type="radio" name="frequency" value="one-time" checked /> One-time</label>
+            <label><input type="radio" name="frequency" value="monthly" /> Monthly</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">
+          Proceed to Secure Payment
+        </button>
+
+        <p class="secure-note">
+          You will be redirected to SSLCOMMERZ's secure payment page to complete your donation.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="logo">Hope<span>Fund</span></div>
+        <p>
+          HopeFund is a non-profit initiative bringing food, education, and clean water to vulnerable communities.
+        </p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: hello@hopefund.org</p>
+        <p>Phone: +00 123 456 789</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="about.html">About</a>
+        <a href="impact.html">Impact</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> HopeFund. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
