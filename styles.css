@@ -63,6 +63,19 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 42px;       /* adjust if needed */
+  width: auto;
+  object-fit: contain;
+}
+
+
+
+.logo {
   font-weight: 700;
   font-size: 1.4rem;
   letter-spacing: 0.04em;
