@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Child Profile – Bukky Ebun Charitable Foundation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="images/foundation-logo.png" alt="Bukky Ebun Charitable Foundation" class="logo-img">
+    </div>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="children.html">Children</a>
+      <a href="activities.html">Activities</a>
+      <a href="impact.html">Impact</a>
+      <a href="founder.html">Founder</a>
+      <a href="index.html#donate">Donate</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero small-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner hero-inner-center">
+    <div class="hero-text fade-in-on-scroll">
+      <h1 id="childName">Child Profile</h1>
+      <p>
+        Learn more about this child and how your support can make a lasting difference
+        in their life through mentorship and care.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Profile Section -->
+<section class="section fade-in-on-scroll">
+  <div class="container">
+
+    <div class="profile-grid">
+
+      <!-- Child Image -->
+      <div class="profile-image">
+        <img src="images/child-placeholder.jpg" alt="Child photo" id="childImage">
+      </div>
+
+      <!-- Child Details -->
+      <div class="profile-details">
+        <h2 id="childNameSecondary">Child Name</h2>
+
+        <ul class="profile-info">
+          <li><strong>Age:</strong> <span id="childAge">—</span></li>
+          <li><strong>Location:</strong> <span id="childLocation">Nigeria</span></li>
+          <li><strong>Program:</strong> Adoption & Mentorship</li>
+        </ul>
+
+        <p id="childStory">
+          This child is currently under our care and receives support for food,
+          education, healthcare, and emotional wellbeing. With continued mentorship
+          and sponsorship, they can grow in a safe and nurturing environment.
+        </p>
+
+        <div class="needs-box">
+          <h4>Current Needs</h4>
+          <ul>
+            <li>✔ Education support & school supplies</li>
+            <li>✔ Nutritious meals & clothing</li>
+            <li>✔ Healthcare & emotional care</li>
+            <li>✔ Mentorship & guidance</li>
+          </ul>
+        </div>
+
+        <div class="profile-actions">
+          <a href="index.html?child=Aisha%20Mohammed#donate" class="btn btn-primary">
+              Sponsor / Support This Child</a>
+
+          <a href="children.html" class="btn btn-outline">
+            Back to Children
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Privacy Note -->
+<section class="section section-alt fade-in-on-scroll">
+  <div class="container" style="max-width:900px;text-align:center;">
+    <h3>Privacy & Protection</h3>
+    <p>
+      We prioritize the safety and dignity of every child in our care.
+      Information shared on this page is carefully reviewed and used only
+      to promote responsible sponsorship and mentorship.
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="logo">
+        <img src="images/foundation-logo.png" alt="Bukky Ebun Charitable Foundation" class="logo-img">
+      </div>
+      <p>Standing beside every child with care, dignity, and love.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="about.html">About</a>
+      <a href="children.html">Children</a>
+      <a href="activities.html">Activities</a>
+    </div>
+    <div>
+      <h4>Get Involved</h4>
+      <a href="index.html#donate">Donate</a>
+      <a href="children.html">Sponsor a Child</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Bukky Ebun Charitable Foundation</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- Child Profile Script -->
+<script>
+  const childrenData = {
+    "Aisha Mohammed": {
+      age: 7,
+      image: "images/child-1.jpg",
+      story: "Aisha loves drawing and dreams of becoming a teacher. She needs support for school supplies, daily meals, and mentorship to help her grow confidently."
+    },
+    "Samuel Okoye": {
+      age: 10,
+      image: "images/child-2.jpg",
+      story: "Samuel enjoys football and reading. With consistent mentorship and education support, he can stay focused on his dreams."
+    },
+    "Fatima Bello": {
+      age: 6,
+      image: "images/child-3.jpg",
+      story: "Fatima is shy but very curious. Your support helps provide healthcare, early education, and emotional care."
+    },
+    "Daniel Adeyemi": {
+      age: 9,
+      image: "images/child-4.jpg",
+      story: "Daniel loves mathematics and science. Sponsorship helps cover school fees and learning materials."
+    },
+    "Blessing Eze": {
+      age: 8,
+      image: "images/child-5.jpg",
+      story: "Blessing enjoys singing and storytelling. Support helps with nutrition, clothing, and education."
+    },
+    "Ibrahim Sadiq": {
+      age: 11,
+      image: "images/child-6.jpg",
+      story: "Ibrahim is responsible and caring. Mentorship helps guide him toward positive life choices and leadership."
+    },
+    "Zainab Musa": {
+      age: 5,
+      image: "images/child-7.jpg",
+      story: "Zainab is cheerful and energetic. Your support ensures proper care, nutrition, and early learning."
+    },
+    "Joseph Mensah": {
+      age: 12,
+      image: "images/child-8.jpg",
+      story: "Joseph dreams of becoming an engineer. Sponsorship supports his secondary education and mentorship."
+    },
+    "Maryam Lawal": {
+      age: 7,
+      image: "images/child-9.jpg",
+      story: "Maryam enjoys reading and helping others. Your support provides education, emotional care, and stability."
+    }
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const childName = params.get("child");  
+
+  if (childName && childrenData[childName]) {
+    const child = childrenData[childName];
+
+    document.getElementById("childName").textContent = childName;
+    document.getElementById("childNameSecondary").textContent = childName;
+    document.getElementById("childAge").textContent = child.age;
+    document.getElementById("childStory").textContent = child.story;
+    document.getElementById("childImage").src = child.image;
+    document.getElementById("childImage").alt = childName;
+  } else {
+    // fallback (safety)
+    document.getElementById("childName").textContent = "Child Profile";
+    document.getElementById("childNameSecondary").textContent = "Child Profile";
+  }
+</script>
+
+
+</body>
+</html>

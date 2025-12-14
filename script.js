@@ -142,3 +142,39 @@ faqQuestions.forEach((q) => {
     answer.classList.toggle("open-faq");
   });
 });
+
+// ===============================
+// Auto-connect Child → Donation
+// ===============================
+
+// Read child name from URL (if coming from child-profile page)
+const urlParams = new URLSearchParams(window.location.search);
+const selectedChild = urlParams.get("child");
+
+if (selectedChild) {
+  // Save child name for later use (safe + reusable)
+  localStorage.setItem("selectedChild", selectedChild);
+}
+
+// If donation form exists, auto-fill child info
+if (donationForm) {
+  const savedChild = localStorage.getItem("selectedChild");
+
+  if (savedChild) {
+    // OPTIONAL: change cause dropdown text
+    if (causeSelect) {
+      causeSelect.value = "General Fund";
+    }
+
+    // OPTIONAL: show info to donor (recommended UX)
+    const donateInfo = document.querySelector(".donate-info");
+    if (donateInfo && !document.getElementById("childNotice")) {
+      const notice = document.createElement("p");
+      notice.id = "childNotice";
+      notice.style.marginTop = "1rem";
+      notice.style.color = "#fbbf77";
+      notice.innerHTML = `You are supporting <strong>${savedChild}</strong>. Thank you for making a difference.`;
+      donateInfo.appendChild(notice);
+    }
+  }
+}
