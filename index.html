@@ -235,13 +235,43 @@
           </div>
         </div>
 
+        <div class="input-group">
+  <label>Payment Method</label>
+  <select id="paymentMethod" required>
+    <option value="">Select payment method</option>
+    <option value="zelle">Zelle</option>
+    <option value="cashapp">Cash App</option>
+    <option value="bank">Bank Transfer</option>
+  </select>
+</div>
+
+<div id="manualPaymentInfo" style="display:none; font-size:0.85rem; color:#f5e0c7;">
+  <div data-method="zelle">
+    <strong>Zelle:</strong> heartofgodfoundation@gmail.com
+  </div>
+  <div data-method="cashapp">
+    <strong>Cash App:</strong> $BukkyEbunFoundation
+  </div>
+  <div data-method="bank">
+    <strong>Bank Transfer:</strong><br>
+    Bank Name: XXXXX<br>
+    Account Name: Bukky Ebun Charitable Foundation<br>
+    Account Number: XXXXXXXX
+  </div>
+</div>
+      <div class="input-group">
+  <label>Upload Payment Proof (Screenshot / Receipt)</label>
+  <input type="file" id="paymentProof" accept="image/*,application/pdf" required />
+</div>
+
         <button type="submit" class="btn btn-primary btn-full">
-          Proceed to Secure Payment
+          I Have Completed Payment
         </button>
 
         <p class="secure-note">
-          You will be redirected to SSLCOMMERZ's secure payment page to complete your donation.
+          Payments are made directly to the foundation’s official accounts.
         </p>
+
       </form>
     </div>
   </section>

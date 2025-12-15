@@ -14,51 +14,21 @@ if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
 
-// SSLCOMMERZ donation form submit
+// Manual Payment donation form submit
 const donationForm = document.getElementById("donationForm");
 
 if (donationForm) {
   donationForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const fullName = document.getElementById("fullName").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const cause = document.getElementById("cause").value;
-    const amount = document.getElementById("amount").value.trim();
-    const frequency =
-      donationForm.querySelector('input[name="frequency"]:checked')?.value || "one-time";
+    alert(
+      "Thank you! Please ensure you have completed the payment using the selected method. Our team will verify your donation shortly."
+    );
 
-    if (!fullName || !email || !amount || Number(amount) <= 0) {
-      alert("Please fill in all required fields and enter a valid amount.");
-      return;
-    }
-
-    const formData = new FormData();
-    formData.append("cus_name", fullName);
-    formData.append("cus_email", email);
-    formData.append("amount", amount);
-    formData.append("cause", cause);
-    formData.append("frequency", frequency);
-
-    fetch("create-payment.php", {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data && data.GatewayPageURL) {
-          window.location.href = data.GatewayPageURL;
-        } else {
-          console.error("SSLCOMMERZ error:", data);
-          alert("Failed to connect to payment gateway. Please try again.");
-        }
-      })
-      .catch((err) => {
-        console.error("Error:", err);
-        alert("Something went wrong. Please try again.");
-      });
+    donationForm.reset();
   });
 }
+
 
 // Quick amount buttons -> hero input
 const quickAmounts = document.getElementById("quickAmounts");
@@ -177,4 +147,15 @@ if (donationForm) {
       donateInfo.appendChild(notice);
     }
   }
+}
+const paymentMethod = document.getElementById("paymentMethod");
+const paymentInfo = document.getElementById("manualPaymentInfo");
+
+if (paymentMethod && paymentInfo) {
+  paymentMethod.addEventListener("change", () => {
+    paymentInfo.style.display = "block";
+    paymentInfo.querySelectorAll("div").forEach(div => div.style.display = "none");
+    const selected = paymentInfo.querySelector(`[data-method="${paymentMethod.value}"]`);
+    if (selected) selected.style.display = "block";
+  });
 }
