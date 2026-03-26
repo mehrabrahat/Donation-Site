@@ -59,7 +59,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 110px;
 }
 
 .logo {
@@ -68,7 +68,7 @@ body {
 }
 
 .logo-img {
-  height: 95px;       /* adjust if needed */
+  height: 150px;       /* adjust if needed */
   width: auto;
   object-fit: contain;
 }
@@ -701,5 +701,26 @@ body {
   }
   .footer-inner {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header-inner {
+    height: 80px;
+  }
+
+  .logo-img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-inner {
+    height: 70px;
+  }
+
+  .logo-img {
+    height: 105px;
   }
 }
